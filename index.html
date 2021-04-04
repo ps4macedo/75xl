@@ -1,0 +1,320 @@
+<html manifest="cache.manifest">
+<style>
+.button:focus, .button::-moz-focus-inner{
+  outline:none;
+  border:none;
+}
+.button{
+  font-family: arial;
+  font-size:16px;
+  text-transform: uppercase;
+  font-weight:700;
+  border:2px solid #404040;
+  border-radius: 4px;
+  padding:10px;
+  cursor: pointer;
+  display:inline-block;
+  text-decoration: none;
+  background:transparent;
+  color:#d4d7d8;
+  box-shadow:0 5px 0 #878787;
+}
+.button:hover{
+  font-size:22px;
+  background:#242424;
+  border:2px solid #ffffff;
+  box-shadow:0 5px 0 #cccccc;
+  color:white;
+}
+.button:active{
+  background:#ee596f;
+  position:relative;
+  color:black;
+  top:5px;
+  box-shadow:none;
+}
+input{
+  width:25px;
+  height:25px;
+  background-color: transparent;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+ .content {
+  width:80%;
+  height:15%;
+  margin-left:7.5%;
+  background:rgba(0,0,0,0.5);
+  color:white;
+  margin-top:1%;
+  font-size:25px;
+  text-align:center;
+  border-radius:30px;
+  padding:20px;
+  line-height:12px;
+ }
+ .title {
+  font-size:40px;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-weight:bolder;
+  margin-bottom:10px;
+ }
+ .yellow {
+  color:yellow;
+ }
+ .hue {
+  color:yellow;
+  padding:10px;
+  border-radius:10px;
+  animation:hue 5s linear infinite;
+  -webkit-animation: hue 5s linear infinite;
+  box-shadow: 0px 0px 50px yellow;
+  color:white;
+  background:rgba(255,255,0,0.4);
+ }
+ .hue:hover{
+  color:yellow;
+  background:transparent;
+ }
+ @keyframes hue{
+ 0%{
+ filter:hue-rotate(0deg);
+ -webkit-filter:hue-rotate(0deg);
+ }
+ 10%{
+ box-shadow: 0px 1px 50px yellow;
+ }
+ 20%{
+ box-shadow: 1px 1px 50px yellow;
+ }
+ 30%{
+ box-shadow: 1px 0px 50px yellow;
+ }
+ 40%{
+  box-shadow: 1px -1px 50px yellow;
+ }
+ 50%{
+ box-shadow: 0px -1px 50px yellow;
+ }
+ 60%{
+ box-shadow: -1px -1px 50px yellow;
+ }
+ 70%{
+ box-shadow: -1px 0px 50px yellow;
+ }
+ 80%{
+ box-shadow: -1px 1px 50px yellow;
+ }
+ 90%{
+ box-shadow: 0px 1px 50px yellow;
+ }
+ 100%{
+ filter:hue-rotate(360deg);
+ -webkit-filter:hue-rotate(360deg);
+ }
+ }
+ .text {
+  padding-bottom:50px;
+ }
+  .back {
+   font-size:25px;
+   margin-top:10px;
+   display:block;
+   line-height:55px;
+   width:20%;
+   text-decoration:none;
+   height:50px;
+   background:white;
+   color:black;
+   border-radius:15px;
+  }
+  .back:hover{
+   border:2px solid white;
+   background:transparent;
+   box-sizing:border-box;
+   color:white;
+  }
+/* Modal Content */
+.modal-content {
+  font-family: BFARNAZ;
+  font-size: 18px;
+  position: relative;
+  background-color: #dddddd;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+		.titlehead {
+		  background-color: transparent;  
+		  border-radius: 5px;
+		  color: #6089f6;
+		  padding: .5em;
+		  text-decoration: none;
+		  text-align: center;
+		  margin-top: -10px;
+		  margin-bottom: -10px;
+		  font-family: system-ui;
+		}
+
+
+		.bg {
+			background-color:white;
+			background-image:url(bg1.png);
+			background-attachment: fixed;
+			background-size:100%;
+			background-repeat:no-repeat;
+			font-family: system-ui;
+			text-align:center;
+		}
+
+		#myProgress {
+		  border: 1px solid #ff5757;
+		  border-radius: 3px;
+		  background-color: transparent;
+		  height: 45px;
+		  position: absolute;
+		  top:0;
+		  bottom: 250;
+		  left: 150;
+		  right: 150;
+		  margin: auto;
+		}
+       #Progress {
+		  color: #8aff75;
+		}
+
+		#myBar {
+		  width: 0%;
+		  height: 40px;
+		  background-color: #2b417a;
+		  text-align: center;
+		  line-height: 30px;
+		  color: #ff5757;
+		  font-size: 35px;
+		  padding-top: 5px;
+		}
+.pointer {cursor: pointer;}
+</style>
+<head>
+	<title>PS4MACEDO 7.55</title>
+</head>
+	<body onload="go()" class="bg">
+		<script>
+			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Instalando Cache Offline... <font color=\"#ee596f\"> Aguarde!!!</font>";localStorage.isCached=false;};
+			window.applicationCache.onprogress=function(a){document.getElementById("myBar").style.width=(Math.round(100*(a.loaded/a.total)))+"%";document.getElementById("myBar").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
+			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Cache <font color=\"#ee596f\">instalada</font> com sucesso!!!";localStorage.isCached=true;setTimeout(function(){document.getElementById("progress").innerHTML="Agora saia usando o CIRCULO, <font color=\"#ee596f\">desabilite a REDE</font> e RETORNE ao navegador."; }, 2600);};
+		</script>
+		<script>
+			var width = 0;
+			function frame1() {
+				var elem = document.getElementById("myBar");
+				var i=0;
+				var id = setInterval(fra, 10);
+				function fra(){
+				  if(i<10 && width<100){
+					  width++;
+					  elem.style.width = width + "%";
+					  elem.innerHTML = width  + "%";
+				  } i++;
+				}
+			}
+		</script>
+		<script>
+		function print(){}
+
+		var scriptCode = '';
+
+		function preloadScripts(lst)
+		{	
+			scriptCode = '';
+			for(var i = 0; i < lst.length; i++)
+			{
+				var xhr = new XMLHttpRequest();
+				xhr.open('GET', lst[i], false);
+				xhr.send('');
+				scriptCode += xhr.responseText + '\n';
+			}
+		}
+		
+		function done(){
+			setTimeout(function(){document.getElementById("progress").innerHTML="Webkit explorado com sucesso!!! <font color=\"#ee596f\">Selecione um exploit.</font>";}, 1000);
+			document.getElementById("myProgress").remove();
+			document.getElementById('load').innerHTML='<tr>'+
+				    '<td><h1 style=\'font-size:27px;text-align:center;\'><u><font color="#6089f6">EXPLOIT PS4 7.55</font></u></h1></td></tr>'+
+					'<tr id="mexp" >'+
+					'<td align="center" colspan="8">'+
+					'<a href="#" id="exploit_old" class="button" onMouseOver="progress.innerHTML=\'Versão anterior do exploit PS4 7.55 (Sleirsgoevy).\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v2\'" onclick="toggle_payload(\'exploit_old\'); return false" style=""><font color="#ee596f">VERSÃO ANTERIOR</font></a>&nbsp;'+
+					'<a href="#" id="exploit" class="button" onMouseOver="progress.innerHTML=\'Última versão do exploit PS4 7.55 (Sleirsgoevy).\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v2\'" onclick="toggle_payload(\'exploit\'); return false" style=""><font color="#ee596f">NOVA VERSÃO</font></a>&nbsp;'+
+					'</td>'+
+					'</tr>'+
+					'<tr>'+
+					'<td align="center" colspan="8">'+
+					'<font size="3" color="#6089f6">Para concluir o DESBLOQUEIO, <font color="#ee596f"><b>é necessário clicar em um versão do exploit (RISCO DE KP).</b></font></font>'+
+					'</td>'+
+					'</tr>'+
+					'<tr><td><hr size="1" color="#6089f6"></td></tr>';
+		}
+		
+		window.midExploit = function()
+		{
+			preloadScripts(['exploit.js']);
+		}
+
+		window.postExploit = function()
+		{
+			setTimeout(function()
+			{	
+				eval.call(window, scriptCode);
+				done();
+			}, 100);
+
+		};
+		
+		window.postPayload = function()
+		{
+			setTimeout(function()
+			{	
+				eval.call(window, scriptCode);
+				//done();
+			}, 100);
+
+		};
+
+		</script>
+		<script src="utils.js"></script>
+		<script src="int64.js"></script>
+		<script src="ps4.js"></script>
+		<h1 id="progress" class="titlehead">Carregando... Por favor, <font color="#ee596f">espere!!!</font></h1>
+		<hr width="75%" size="1" color="#ff5757">
+		<button style="opacity:0" id="input1" onfocus="handle2()"></button>
+		<button style="opacity:0" id="input2"></button>
+		<button style="opacity:0" id="input3" onfocus="handle2()"></button>
+		<select style="opacity:0" id="select1">
+			<option value="value1">Value1</option>
+		</select>
+		<h1 id="myProgress">
+		  <div id="myBar">0%</div>
+		</h1>
+		<table id="load" align="center" style="width:1100px;margin-top:30px;">
+		</table>
+	</body>
+</html>
