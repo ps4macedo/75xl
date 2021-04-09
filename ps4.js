@@ -145,6 +145,27 @@ function toggle_payload(pld){
 	}else if(pld == "goldhen2"){
 		document.getElementById("progress").innerHTML="Carregando GoldHen v1.13b... Por favor, AGUARDE!!!";
 		preloadScripts(['preloader.js', 'goldhen2.js', 'loader.js']);
+	}else if(pld == "dumper"){
+		document.getElementById("progress").innerHTML="Carregando Carga Útil... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'dumper.js', 'loader.js']);
+	}else if(pld == "app2usb"){
+		document.getElementById("progress").innerHTML="Carregando o app2USB... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'app2usb.js', 'loader.js']);
+	}else if(pld == "webrte"){
+		document.getElementById("progress").innerHTML="Carregando o WebRTE... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'webrte.js', 'loader.js']);
+	}else if(pld == "ps4debug"){
+		document.getElementById("progress").innerHTML="Carregando o PS4Debug... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'ps4debug.js', 'loader.js']);
+	}else if(pld == "todex"){
+		document.getElementById("progress").innerHTML="Carregando o ToDex... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'todex.js', 'loader.js']);
+	}else if(pld == "fancontrol"){
+		document.getElementById("progress").innerHTML="Enviando temperatura alvo... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'fancontrol.js', 'loader.js']);
+	}else if(pld == "guia"){
+		document.getElementById("progress").innerHTML="Carregando o host para o guia do usuário... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'guia.js', 'loader.js']);
 	}
 	if(window.postPayload)
 		window.postPayload();

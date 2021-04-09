@@ -1,9 +1,13 @@
 CACHE MANIFEST 
 
+app2usb.js
 bg1.png
+dumper.js
 exploit.js
+fancontrol.js
 goldhen.js
 goldhen2.js
+guia.js
 index.html
 int64.js
 jb.js
@@ -13,4 +17,7 @@ mira2.js
 oldjb.js
 preloader.js
 ps4.js
+ps4debug.js
+todex.js
 utils.js
+webrte.js

@@ -149909,6 +149909,7 @@ if(main_ret == 179 || main_ret == 0){
 					'</td>'+
 					'</tr>'+
 					'<tr><td><hr size="1" color="#6089f6"></td></tr>'+
+					'<tr><td><br/></td></tr>'+
 					'<tr>'+
 					'<td><h1 style=\'font-size:27px;text-align:center;\'><u><font color="#6089f6">CARGAS ÚTEIS</font></u></h1></td>'+
 					'</tr>'+
@@ -149921,6 +149922,18 @@ if(main_ret == 179 || main_ret == 0){
 					'<a href="#" id="binloader" class="button" onMouseOver="progress.innerHTML=\'Permite enviar arquivos .BIN para o PS4 pela porta 9020.\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v2\'" onclick="toggle_payload(\'binloader\'); return false" style="">Bin Loader</a>&nbsp;'+
 					'</td>'+
 					'</tr>'+
+					'<tr><td><br/></td></tr>'+
+					'<tr>'+
+					'<td align="center"  colspan="8">'+
+					'<a href="#" id="dumper" class="button" onMouseOver="progress.innerHTML=\'Permite fazer cópia de segurança de seus jogos via USB.\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v2\'" onclick="toggle_payload(\'dumper\'); return false" style="">Dumper</a>&nbsp;'+
+					'<a href="#" id="app2usb" class="button" onMouseOver="progress.innerHTML=\'Transfere jogos do console para um hd externo (exFAT).\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v2\'" onclick="toggle_payload(\'app2usb\'); return false" style="">App2USB</a>&nbsp;'+
+					'<a href="#" id="ps4debug" class="button" onMouseOver="progress.innerHTML=\'Permite usar o PS4 Offline Account Activator.\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v2\'" onclick="toggle_payload(\'ps4debug\'); return false" style="">PS4Debug</a>&nbsp;'+
+					'<a href="#" id="todex" class="button" onMouseOver="progress.innerHTML=\'Modo de depuração do console (teste de devkit).\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v2\'" onclick="toggle_payload(\'todex\'); return false" style="">To-Dex</a>&nbsp;'+
+					'<a href="#" id="webrte" class="button" onMouseOver="progress.innerHTML=\'Para gerenciamento de trapaças.\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v2\'" onclick="toggle_payload(\'webrte\'); return false" style="">WebRTE</a>&nbsp;'+
+					'<a href="#" id="fancontrol" class="button" onMouseOver="progress.innerHTML=\'Controle de velocidade do cooler para uma temperatura alvo do PS4.\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v2\'" onclick="toggle_payload(\'fancontrol\'); return false" style="">Fan Control</a>&nbsp;<select id="temp"  style="font-size:20px;height:35px;width:60px;background-color:transparent;color:#ee596f;border:2px solid #404040;"><option value="60">60</option><option value="61">61</option><option value="62">62</option><option value="63">63</option><option value="64">64</option><option value="65">65</option><option value="66">66</option><option value="67">67</option><option value="68">68</option><option value="69">69</option><option value="70" selected>70</option><option value="71">71</option><option value="72">72</option><option value="73">73</option><option value="74">74</option><option value="75">75</option><option value="76">76</option><option value="77">77</option><option value="78">78</option><option value="79">79</option><option value="80">80</option></select><font size=5px>&#176;C</font>'+
+					'</td>'+
+					'</tr>'+
+					'<tr><td><br/></td></tr>'+
 					'<tr><td><br/></td></tr>'+
 					'<tr><td><hr size="1" color="#6089f6"></td></tr>';
 }else{
