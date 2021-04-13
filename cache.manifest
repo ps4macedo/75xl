@@ -1,6 +1,7 @@
 CACHE MANIFEST 
 
 app2usb.js
+backup.js
 bg1.png
 dumper.js
 exploit.js
@@ -18,6 +19,7 @@ oldjb.js
 preloader.js
 ps4.js
 ps4debug.js
+restore.js
 todex.js
 utils.js
 webrte.js

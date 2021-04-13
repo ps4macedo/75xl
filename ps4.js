@@ -148,6 +148,12 @@ function toggle_payload(pld){
 	}else if(pld == "dumper"){
 		document.getElementById("progress").innerHTML="Carregando Carga Útil... Por favor, AGUARDE!!!";
 		preloadScripts(['preloader.js', 'dumper.js', 'loader.js']);
+	}else if(pld == "backup"){
+		document.getElementById("progress").innerHTML="Carregando Carga Útil (backup)... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'backup.js', 'loader.js']);
+	}else if(pld == "restore"){
+		document.getElementById("progress").innerHTML="Carregando Carga Útil (restore)... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'restore.js', 'loader.js']);
 	}else if(pld == "app2usb"){
 		document.getElementById("progress").innerHTML="Carregando o app2USB... Por favor, AGUARDE!!!";
 		preloadScripts(['preloader.js', 'app2usb.js', 'loader.js']);
