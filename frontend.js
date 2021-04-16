@@ -59,7 +59,7 @@ function makeUI()
         tr.appendChild(tdButton);
         var button = document.createElement('button');
         tdButton.appendChild(button);
-        button.appendChild(document.createTextNode('Set & Activate'));
+        button.appendChild(document.createTextNode('Definir e Ativar'));
         fields.push({username: username, id: id, button: button});
     }
     document.body.appendChild(root);
