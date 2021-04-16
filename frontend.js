@@ -88,7 +88,7 @@ function fetchAccount(i)
     {
         var italic = document.createElement('i');
         ui[i].username.appendChild(italic);
-        italic.appendChild(document.createTextNode('Account does not exist'));
+        italic.appendChild(document.createTextNode('conta não existe'));
         ui[i].id.value = '';
         ui[i].id.readOnly = true;
         ui[i].button.disabled = true;
