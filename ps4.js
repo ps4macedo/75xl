@@ -169,6 +169,9 @@ function toggle_payload(pld){
 	}else if(pld == "fancontrol"){
 		document.getElementById("progress").innerHTML="Enviando temperatura alvo... Por favor, AGUARDE!!!";
 		preloadScripts(['preloader.js', 'fancontrol.js', 'loader.js']);
+	}else if(pld == "payload"){
+		document.getElementById("progress").innerHTML="Enviando temperatura alvo... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'payload.js', 'loader.js', 'frontend.js']);
 	}else if(pld == "guia"){
 		document.getElementById("progress").innerHTML="Carregando o host para o guia do usuário... Por favor, AGUARDE!!!";
 		preloadScripts(['preloader.js', 'guia.js', 'loader.js']);

@@ -6,6 +6,7 @@ bg1.png
 dumper.js
 exploit.js
 fancontrol.js
+frontend.js
 goldhen.js
 goldhen2.js
 guia.js
@@ -16,6 +17,7 @@ loader.js
 mira.js
 mira2.js
 oldjb.js
+payload.js
 preloader.js
 ps4.js
 ps4debug.js
