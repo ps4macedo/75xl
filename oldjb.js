@@ -61619,6 +61619,7 @@ if(main_ret == 179 || main_ret == 0){
 					'</tr>'+
 					'<tr>'+
 					'<td align="center" colspan="8">'+
+					'<a href="#" id="hen213b" class="button" onMouseOver="progress.innerHTML=\'Ativa HEN v2.1.3b\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55\'" onclick="toggle_payload(\'hen213b\'); return false" style=""><font color="#6089f6">HEN 213b</font></a>&nbsp;'+
 					'<a href="#" id="goldhen" class="button" onMouseOver="progress.innerHTML=\'Ativa GoldHEN v1.0 (SiSTRo) + FTP\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v2\'" onclick="toggle_payload(\'goldhen\'); return false" style=""><font color="#6089f6">GoldHEN v1.0</font></a>&nbsp;'+
 					'<a href="#" id="goldhen2" class="button" onMouseOver="progress.innerHTML=\'Ativa GoldHEN v1.1 (SiSTRo) + FTP\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v2\'" onclick="toggle_payload(\'goldhen2\'); return false" style=""><font color="#6089f6">GoldHEN 1.1</font></a>&nbsp;'+
 					'<a href="#" id="mira" class="button" onMouseOver="progress.innerHTML=\'Ativa Mira (AlAzif)\'"; onmouseout="progress.innerHTML=\'PS4MACEDO Jailbreak 7.55 v2\'" onclick="toggle_payload(\'mira\'); return false" style=""><font color="#ee596f">MIRA</font></a>&nbsp;'+

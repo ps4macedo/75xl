@@ -139,6 +139,9 @@ function toggle_payload(pld){
 	}else if(pld == "mira2"){
 		document.getElementById("progress").innerHTML="Carregando MIRA + SPOOF... Por favor, AGUARDE!!!";
 		preloadScripts(['preloader.js', 'mira2.js', 'loader.js']);
+	}else if(pld == "hen213b"){
+		document.getElementById("progress").innerHTML="Carregando Hen v2.1.3b... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'hen213b.js', 'loader.js']);
 	}else if(pld == "goldhen"){
 		document.getElementById("progress").innerHTML="Carregando GoldHen v1.0... Por favor, AGUARDE!!!";
 		preloadScripts(['preloader.js', 'goldhen.js', 'loader.js']);
