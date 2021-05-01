@@ -137,12 +137,12 @@ function toggle_payload(pld){
 		preloadScripts(['jb.js','preloader.js', 'mira2.js', 'loader.js']);
 	}else if(pld == "hen213b"){
 		document.getElementById("progress").innerHTML="Carregando Hen v2.1.3b... Por favor, AGUARDE!!!";
-		preloadScripts(['jb.js','preloader.js', 'hen213b.js', 'loader.js']);
+		preloadScripts(['jb.js','preloaderx.js', 'hen213b.js', 'loader.js']);
 	}else if(pld == "goldhen"){
 		document.getElementById("progress").innerHTML="Carregando GoldHen v1.0... Por favor, AGUARDE!!!";
 		preloadScripts(['jb.js','preloader.js', 'goldhen.js', 'loader.js']);
 	}else if(pld == "goldhen2"){
-		document.getElementById("progress").innerHTML="Carregando GoldHen v1.13b... Por favor, AGUARDE!!!";
+		document.getElementById("progress").innerHTML="Carregando GoldHen v1.1... Por favor, AGUARDE!!!";
 		preloadScripts(['jb.js','preloader.js', 'goldhen2.js', 'loader.js']);
 	}else if(pld == "dumper"){
 		document.getElementById("progress").innerHTML="Carregando Carga Útil... Por favor, AGUARDE!!!";
