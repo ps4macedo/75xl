@@ -215,7 +215,7 @@ input{
 .pointer {cursor: pointer;}
 </style>
 <head>
-	<title>PS4MACEDO 7.55 (Novo JB)</title>
+	<title>PS4MACEDO 7.55 (Novo JB e junto com o WebKit)</title>
 </head>
 	<body onload="go()" class="bg">
 		<script>
@@ -256,7 +256,7 @@ input{
 		}
 		
 		function done(){
-			setTimeout(function(){document.getElementById("progress").innerHTML="Webkit explorado com sucesso!!! <font color=\"#ee596f\">Selecione uma EXPLOIT/CARGA ÚTEL.</font>";}, 1000);
+			setTimeout(function(){document.getElementById("progress").innerHTML="Explorações concluídas!!! <font color=\"#ee596f\">Selecione uma CARGA ÚTEL.</font>";}, 1000);
 			document.getElementById("myProgress").remove();
 			document.getElementById('load').innerHTML='<tr>'+
 					'<td><br/></td></tr>'+
@@ -306,7 +306,7 @@ input{
 		
 		window.midExploit = function()
 		{
-			preloadScripts(['exploit.js']);
+			preloadScripts(['exploit.js', 'jb.js']);
 		}
 
 		window.postExploit = function()
@@ -314,7 +314,7 @@ input{
 			setTimeout(function()
 			{	
 				eval.call(window, scriptCode);
-				done();
+				if(main_ret == 0 || main_ret == 179) {done();}else{alert("Jailbreak FALHOU! Reinicie o PS4 sem sair dessa tela, usando o botão \"PS\" \n e tente novamente.");}
 			}, 100);
 
 		};
