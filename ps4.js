@@ -508,7 +508,7 @@ function sprayStringImpl(start, end) {
 }
 
 function go() {
-		if(localStorage.isCached){
+		if(localStorage.is755Cached){
 		/* Init spray */
 		sprayHTMLTextArea();
 
