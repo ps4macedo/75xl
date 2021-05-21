@@ -145,8 +145,11 @@ function toggle_payload(pld){
 		document.getElementById("progress").innerHTML="Carregando GoldHen v1.1... Por favor, AGUARDE!!!";
 		preloadScripts(['preloader.js', 'goldhen2.js', 'loader.js']);
 	}else if(pld == "dumper"){
-		document.getElementById("progress").innerHTML="Carregando Carga Útil... Por favor, AGUARDE!!!";
+		document.getElementById("progress").innerHTML="Carregando o dumper... Por favor, AGUARDE!!!";
 		preloadScripts(['preloader.js', 'dumper.js', 'loader.js']);
+	}else if(pld == "FTP"){
+		document.getElementById("progress").innerHTML="Carregando o FTP... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'ftp.js', 'loader.js']);
 	}else if(pld == "backup"){
 		document.getElementById("progress").innerHTML="Carregando Carga Útil (backup)... Por favor, AGUARDE!!!";
 		preloadScripts(['preloader.js', 'backup.js', 'loader.js']);
@@ -156,29 +159,79 @@ function toggle_payload(pld){
 	}else if(pld == "app2usb"){
 		document.getElementById("progress").innerHTML="Carregando o app2USB... Por favor, AGUARDE!!!";
 		preloadScripts(['preloader.js', 'app2usb.js', 'loader.js']);
-	}else if(pld == "webrte"){
-		document.getElementById("progress").innerHTML="Carregando o WebRTE... Por favor, AGUARDE!!!";
-		preloadScripts(['preloader.js', 'webrte.js', 'loader.js']);
 	}else if(pld == "ps4debug"){
 		document.getElementById("progress").innerHTML="Carregando o PS4Debug... Por favor, AGUARDE!!!";
 		preloadScripts(['preloader.js', 'ps4debug.js', 'loader.js']);
 	}else if(pld == "todex"){
 		document.getElementById("progress").innerHTML="Carregando o ToDex... Por favor, AGUARDE!!!";
 		preloadScripts(['preloader.js', 'todex.js', 'loader.js']);
-	}else if(pld == "fancontrol"){
-		document.getElementById("progress").innerHTML="Enviando temperatura alvo... Por favor, AGUARDE!!!";
-		preloadScripts(['preloader.js', 'fancontrol.js', 'loader.js']);
+	}else if(pld == "kerneldumper"){
+		document.getElementById("progress").innerHTML="Carregando o Kernel Dumper... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'kerneldumper.js', 'loader.js']);
+	}else if(pld == "disableupdate"){
+		document.getElementById("progress").innerHTML="Carregando o disable update... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'disableupdate.js', 'loader.js']);
+	}else if(pld == "enableupdate"){
+		document.getElementById("progress").innerHTML="Carregando o enableupdate... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'enableupdate.js', 'loader.js']);
 	}else if(pld == "payload"){
 		document.getElementById("progress").innerHTML="Abrindo página de ativação(ões)... Por favor, AGUARDE!!!";
 		preloadScripts(['preloader.js', 'payload.js', 'loader.js', 'frontend.js']);
-	}else if(pld == "guia"){
-		document.getElementById("progress").innerHTML="Carregando o host para o guia do usuário... Por favor, AGUARDE!!!";
-		preloadScripts(['preloader.js', 'guia.js', 'loader.js']);
+	}else if(pld == "linux1"){
+		document.getElementById("progress").innerHTML="Carregando o Linux 1g... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'linux1.js', 'loader.js']);
+	}else if(pld == "linux3"){
+		document.getElementById("progress").innerHTML="Carregando o Linux 3g... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'linux3.js', 'loader.js']);
+	}else if(pld == "webrte"){
+		document.getElementById("progress").innerHTML="Carregando o WebRTE... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'webrte.js', 'loader.js']);
+	}else if(pld == "arabicGuy100"){
+		document.getElementById("progress").innerHTML="Carregando o ArabicGuy100... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'arabicGuy100.js', 'loader.js']);
+	}else if(pld == "arabicGuy127"){
+		document.getElementById("progress").innerHTML="Carregando o ArabicGuy127... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'arabicGuy127.js', 'loader.js']);
+	}else if(pld == "arabicGuy132"){
+		document.getElementById("progress").innerHTML="Carregando o ArabicGuy132... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'arabicGuy132.js', 'loader.js']);
+	}else if(pld == "native100"){
+		document.getElementById("progress").innerHTML="Carregando o Native100... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'native100.js', 'loader.js']);
+	}else if(pld == "native127"){
+		document.getElementById("progress").innerHTML="Carregando o Native127... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'native127.js', 'loader.js']);
+	}else if(pld == "native132"){
+		document.getElementById("progress").innerHTML="Carregando o Native132... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'native132.js', 'loader.js']);
+	}else if(pld == "lamance132"){
+		document.getElementById("progress").innerHTML="Carregando o lamance132... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'lamance132.js', 'loader.js']);
+	}else if(pld == "rif"){
+		document.getElementById("progress").innerHTML="Carregando RIF... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'rif.js', 'loader.js']);
+	}else if(pld == "idu"){
+		document.getElementById("progress").innerHTML="Carregando IDU... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'idu.js', 'loader.js']);
+	}else if(pld == "aslr"){
+		document.getElementById("progress").innerHTML="Carregando ASLR... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'aslr.js', 'loader.js']);
+	}else if(pld == "kernelclock"){
+		document.getElementById("progress").innerHTML="Carregando kernelclock... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'kernelclock.js', 'loader.js']);
+	}else if(pld == "enablebrowser"){
+		document.getElementById("progress").innerHTML="Carregando enablebrowser... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'enablebrowser.js', 'loader.js']);
+	}else if(pld == "historyBlocker"){
+		document.getElementById("progress").innerHTML="Carregando historyBlocker... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'historyBlocker.js', 'loader.js']);
+	}else if(pld == "fancontrol"){
+		document.getElementById("progress").innerHTML="Enviando temperatura alvo... Por favor, AGUARDE!!!";
+		preloadScripts(['preloader.js', 'fancontrol.js', 'loader.js']);
 	}
 	if(window.postPayload)
 		window.postPayload();
 	payload_finished(pld);
-	
 }
 
 function payload_finished(payload)
